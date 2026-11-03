@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>MultiShop - Calzado</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo">🛍️ MultiShop</div>
+        <div class="user-controls">
+            <span id="user-display">Invitado</span>
+            <button onclick="toggleAuthModal()">Iniciar Sesión / Registro</button>
+            <button onclick="toggleCart()">🛒 Carrito (<span id="cart-count">0</span>)</button>
+        </div>
+    </header>
+
+    <nav class="navbar">
+        <a href="index.html">Inicio</a>
+        <a href="ropa.html">Ropa</a>
+        <a href="cosmeticos.html">Cosméticos</a>
+        <a href="calzado.html" class="active">Calzado</a>
+        <a href="celulares.html">Celulares</a>
+    </nav>
+
+    <div class="container">
+        <h2 class="section-title">Catálogo de Calzado (Nike / Adidas / Puma)</h2>
+        <div class="grid-products">
+            <div class="card"><img src="https://images.unsplash.com/photo-1584735935682-2f2b69dff9d2?w=300"><div class="card-body"><span class="badge">Adidas</span><h4>Zapatillas Ultraboost Light</h4><div class="price">$160.00</div><button class="btn-add" onclick="addToCart('Zapatillas Ultraboost Light', 160.00)">Agregar</button></div></div>
+            <div class="card"><img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=300"><div class="card-body"><span class="badge">Nike</span><h4>Tenis Air Max 270</h4><div class="price">$140.00</div><button class="btn-add" onclick="addToCart('Tenis Air Max 270', 140.00)">Agregar</button></div></div>
+            <div class="card"><img src="https://images.unsplash.com/photo-1608231387042-66d1773070a5?w=300"><div class="card-body"><span class="badge">Puma</span><h4>Tenis Suede Classic</h4><div class="price">$85.00</div><button class="btn-add" onclick="addToCart('Tenis Suede Classic', 85.00)">Agregar</button></div></div>
+            <div class="card"><img src="https://images.unsplash.com/photo-1552346154-21d32810aba3?w=300"><div class="card-body"><span class="badge">Nike</span><h4>Tenis Jordan Retro 1</h4><div class="price">$180.00</div><button class="btn-add" onclick="addToCart('Tenis Jordan Retro 1', 180.00)">Agregar</button></div></div>
+            <div class="card"><img src="https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?w=300"><div class="card-body"><span class="badge">Adidas</span><h4>Tenis Stan Smith Vintage</h4><div class="price">$95.00</div><button class="btn-add" onclick="addToCart('Tenis Stan Smith Vintage', 95.00)">Agregar</button></div></div>
+            <div class="card"><img src="https://images.unsplash.com/photo-1638247025967-b4e38f787b76?w=300"><div class="card-body"><span class="badge">Nike</span><h4>Botas Chelsea de Cuero</h4><div class="price">$110.00</div><button class="btn-add" onclick="addToCart('Botas Chelsea de Cuero', 110.00)">Agregar</button></div></div>
+            <div class="card"><img src="https://images.unsplash.com/photo-1543508282-6319a3e2621f?w=300"><div class="card-body"><span class="badge">Puma</span><h4>Tenis RS-X Efekt</h4><div class="price">$115.00</div><button class="btn-add" onclick="addToCart('Tenis RS-X Efekt', 115.00)">Agregar</button></div></div>
+            <div class="card"><img src="https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa?w=300"><div class="card-body"><span class="badge">Nike</span><h4>Zapatillas Metcon 8</h4><div class="price">$130.00</div><button class="btn-add" onclick="addToCart('Zapatillas Metcon 8', 130.00)">Agregar</button></div></div>
+            <div class="card"><img src="https://images.unsplash.com/photo-1515955656352-a1fa3ffcd111?w=300"><div class="card-body"><span class="badge">Adidas</span><h4>Tenis NMD R1 Primeblue</h4><div class="price">$145.00</div><button class="btn-add" onclick="addToCart('Tenis NMD R1 Primeblue', 145.00)">Agregar</button></div></div>
+            <div class="card"><img src="https://images.unsplash.com/photo-1603808033192-082d6919d3e1?w=300"><div class="card-body"><span class="badge">Puma</span><h4>Sandalias Clog Futuro</h4><div class="price">$49.99</div><button class="btn-add" onclick="addToCart('Sandalias Clog Futuro', 49.99)">Agregar</button></div></div>
+        </div>
+    </div>
+
+    <div class="sql-console">📊 Query SQL: <pre id="sql-log">SELECT * FROM productos WHERE categoria_id = 3;</pre></div>
+    <script src="app.js"></script>
+</body>
+</html>

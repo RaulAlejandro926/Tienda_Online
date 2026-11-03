@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>MultiShop - Celulares</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo">🛍️ MultiShop</div>
+        <div class="user-controls">
+            <span id="user-display">Invitado</span>
+            <button onclick="toggleAuthModal()">Iniciar Sesión / Registro</button>
+            <button onclick="toggleCart()">🛒 Carrito (<span id="cart-count">0</span>)</button>
+        </div>
+    </header>
+
+    <nav class="navbar">
+        <a href="index.html">Inicio</a>
+        <a href="ropa.html">Ropa</a>
+        <a href="cosmeticos.html">Cosméticos</a>
+        <a href="calzado.html">Calzado</a>
+        <a href="celulares.html" class="active">Celulares</a>
+    </nav>
+
+    <div class="container">
+        <h2 class="section-title">Catálogo de Celulares (Apple / Samsung)</h2>
+        <div class="grid-products">
+            <div class="card"><img src="https://images.unsplash.com/photo-1695048133142-1a20484d2569?w=300"><div class="card-body"><span class="badge">Apple</span><h4>iPhone 15 Pro Max 256GB</h4><div class="price">$1199.00</div><button class="btn-add" onclick="addToCart('iPhone 15 Pro Max 256GB', 1199.00)">Agregar</button></div></div>
+            <div class="card"><img src="https://images.unsplash.com/photo-1610945265064-0e34e5519bbf?w=300"><div class="card-body"><span class="badge">Samsung</span><h4>Galaxy S24 Ultra 512GB</h4><div class="price">$1299.00</div><button class="btn-add" onclick="addToCart('Galaxy S24 Ultra 512GB', 1299.00)">Agregar</button></div></div>
+            <div class="card"><img src="https://images.unsplash.com/photo-1663499482523-1c0c1bae4ce1?w=300"><div class="card-body"><span class="badge">Apple</span><h4>iPhone 14 128GB Midnight</h4><div class="price">$699.00</div><button class="btn-add" onclick="addToCart('iPhone 14 128GB Midnight', 699.00)">Agregar</button></div></div>
+            <div class="card"><img src="https://images.unsplash.com/photo-1565849904461-04a58ad377e0?w=300"><div class="card-body"><span class="badge">Samsung</span><h4>Galaxy A54 5G 256GB</h4><div class="price">$449.00</div><button class="btn-add" onclick="addToCart('Galaxy A54 5G 256GB', 449.00)">Agregar</button></div></div>
+            <div class="card"><img src="https://images.unsplash.com/photo-1632661674596-df8be070a5c5?w=300"><div class="card-body"><span class="badge">Apple</span><h4>iPhone 13 128GB Starlight</h4><div class="price">$599.00</div><button class="btn-add" onclick="addToCart('iPhone 13 128GB Starlight', 599.00)">Agregar</button></div></div>
+            <div class="card"><img src="https://images.unsplash.com/photo-1580910051074-3eb694886505?w=300"><div class="card-body"><span class="badge">Samsung</span><h4>Galaxy Z Flip 5 256GB</h4><div class="price">$999.00</div><button class="btn-add" onclick="addToCart('Galaxy Z Flip 5 256GB', 999.00)">Agregar</button></div></div>
+            <div class="card"><img src="https://images.unsplash.com/photo-1510557880182-3d4d3cba35a5?w=300"><div class="card-body"><span class="badge">Apple</span><h4>iPhone 15 128GB Pink</h4><div class="price">$799.00</div><button class="btn-add" onclick="addToCart('iPhone 15 128GB Pink', 799.00)">Agregar</button></div></div>
+            <div class="card"><img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=300"><div class="card-body"><span class="badge">Samsung</span><h4>Galaxy S23 FE 128GB</h4><div class="price">$599.00</div><button class="btn-add" onclick="addToCart('Galaxy S23 FE 128GB', 599.00)">Agregar</button></div></div>
+            <div class="card"><img src="https://images.unsplash.com/photo-1567581935884-3349723552ca?w=300"><div class="card-body"><span class="badge">Apple</span><h4>iPhone SE 3ra Gen 64GB</h4><div class="price">$429.00</div><button class="btn-add" onclick="addToCart('iPhone SE 3ra Gen 64GB', 429.00)">Agregar</button></div></div>
+            <div class="card"><img src="https://images.unsplash.com/photo-1546054454-aa26e2b734c7?w=300"><div class="card-body"><span class="badge">Samsung</span><h4>Galaxy Z Fold 5 512GB</h4><div class="price">$1799.00</div><button class="btn-add" onclick="addToCart('Galaxy Z Fold 5 512GB', 1799.00)">Agregar</button></div></div>
+        </div>
+    </div>
+
+    <div class="sql-console">📊 Query SQL: <pre id="sql-log">SELECT * FROM productos WHERE categoria_id = 4;</pre></div>
+    <script src="app.js"></script>
+</body>
+</html>

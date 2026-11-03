@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>MultiShop - Cosméticos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo">🛍️ MultiShop</div>
+        <div class="user-controls">
+            <span id="user-display">Invitado</span>
+            <button onclick="toggleAuthModal()">Iniciar Sesión / Registro</button>
+            <button onclick="toggleCart()">🛒 Carrito (<span id="cart-count">0</span>)</button>
+        </div>
+    </header>
+
+    <nav class="navbar">
+        <a href="index.html">Inicio</a>
+        <a href="ropa.html">Ropa</a>
+        <a href="cosmeticos.html" class="active">Cosméticos</a>
+        <a href="calzado.html">Calzado</a>
+        <a href="celulares.html">Celulares</a>
+    </nav>
+
+    <div class="container">
+        <h2 class="section-title">Catálogo de Cosméticos (L'Oréal / Maybelline / MAC)</h2>
+        <div class="grid-products">
+            <div class="card"><img src="https://images.unsplash.com/photo-1586495777744-4413f21062fa?w=300"><div class="card-body"><span class="badge">L'Oréal</span><h4>Labial Color Riche Matte</h4><div class="price">$18.50</div><button class="btn-add" onclick="addToCart('Labial Color Riche Matte', 18.50)">Agregar</button></div></div>
+            <div class="card"><img src="https://images.unsplash.com/photo-1631729371254-42c2892f0e6e?w=300"><div class="card-body"><span class="badge">Maybelline</span><h4>Base Liquid SuperStay 24H</h4><div class="price">$24.99</div><button class="btn-add" onclick="addToCart('Base Liquid SuperStay 24H', 24.99)">Agregar</button></div></div>
+            <div class="card"><img src="https://images.unsplash.com/photo-1560700146-eb71864b2808?w=300"><div class="card-body"><span class="badge">Maybelline</span><h4>Máscara Lash Sensational</h4><div class="price">$14.90</div><button class="btn-add" onclick="addToCart('Máscara Lash Sensational', 14.90)">Agregar</button></div></div>
+            <div class="card"><img src="https://images.unsplash.com/photo-1512496015851-a90fb38ba796?w=300"><div class="card-body"><span class="badge">MAC</span><h4>Paleta Sombras Studio Fix</h4><div class="price">$45.00</div><button class="btn-add" onclick="addToCart('Paleta Sombras Studio Fix', 45.00)">Agregar</button></div></div>
+            <div class="card"><img src="https://images.unsplash.com/photo-1620916566398-39f1143ab7be?w=300"><div class="card-body"><span class="badge">L'Oréal</span><h4>Sérum Facial Ácido Hialurónico</h4><div class="price">$32.00</div><button class="btn-add" onclick="addToCart('Sérum Facial Ácido Hialurónico', 32.00)">Agregar</button></div></div>
+            <div class="card"><img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=300"><div class="card-body"><span class="badge">Maybelline</span><h4>Rubor Compacto Fit Me</h4><div class="price">$12.99</div><button class="btn-add" onclick="addToCart('Rubor Compacto Fit Me', 12.99)">Agregar</button></div></div>
+            <div class="card"><img src="https://images.unsplash.com/photo-1597225244660-1cd128c64284?w=300"><div class="card-body"><span class="badge">L'Oréal</span><h4>Delineador Infaillible Gel</h4><div class="price">$16.50</div><button class="btn-add" onclick="addToCart('Delineador Infaillible Gel', 16.50)">Agregar</button></div></div>
+            <div class="card"><img src="https://images.unsplash.com/photo-1599733589046-10c005739ef9?w=300"><div class="card-body"><span class="badge">MAC</span><h4>Iluminador Extra Dimension</h4><div class="price">$38.00</div><button class="btn-add" onclick="addToCart('Iluminador Extra Dimension', 38.00)">Agregar</button></div></div>
+            <div class="card"><img src="https://images.unsplash.com/photo-1616683693504-3ea7e9ad6fec?w=300"><div class="card-body"><span class="badge">Maybelline</span><h4>Corrector Camouflage Coverage</h4><div class="price">$15.99</div><button class="btn-add" onclick="addToCart('Corrector Camouflage Coverage', 15.99)">Agregar</button></div></div>
+            <div class="card"><img src="https://images.unsplash.com/photo-1556228720-195a672e8a03?w=300"><div class="card-body"><span class="badge">L'Oréal</span><h4>Crema Anti-Edad Revitalift</h4><div class="price">$29.99</div><button class="btn-add" onclick="addToCart('Crema Anti-Edad Revitalift', 29.99)">Agregar</button></div></div>
+        </div>
+    </div>
+
+    <div class="sql-console">📊 Query SQL: <pre id="sql-log">SELECT * FROM productos WHERE categoria_id = 2;</pre></div>
+    <script src="app.js"></script>
+</body>
+</html>

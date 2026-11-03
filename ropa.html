@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>MultiShop - Ropa</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo">🛍️ MultiShop</div>
+        <div class="user-controls">
+            <span id="user-display">Invitado</span>
+            <button onclick="toggleAuthModal()">Iniciar Sesión / Registro</button>
+            <button onclick="toggleCart()">🛒 Carrito (<span id="cart-count">0</span>)</button>
+        </div>
+    </header>
+
+    <nav class="navbar">
+        <a href="index.html">Inicio</a>
+        <a href="ropa.html" class="active">Ropa</a>
+        <a href="cosmeticos.html">Cosméticos</a>
+        <a href="calzado.html">Calzado</a>
+        <a href="celulares.html">Celulares</a>
+    </nav>
+
+    <div class="container">
+        <h2 class="section-title">Catálogo de Ropa (Zara / Levi's)</h2>
+        <div class="grid-products">
+            <div class="card"><img src="https://images.unsplash.com/photo-1596755094514-f87e34085b2c?w=300"><div class="card-body"><span class="badge">Zara</span><h4>Camisa Oxford Slim</h4><div class="price">$49.99</div><button class="btn-add" onclick="addToCart('Camisa Oxford Slim', 49.99)">Agregar</button></div></div>
+            <div class="card"><img src="https://images.unsplash.com/photo-1542272604-780c36856d67?w=300"><div class="card-body"><span class="badge">Levi's</span><h4>Jeans 501 Original</h4><div class="price">$79.99</div><button class="btn-add" onclick="addToCart('Jeans 501 Original', 79.99)">Agregar</button></div></div>
+            <div class="card"><img src="https://images.unsplash.com/photo-1551028719-00167b16eac5?w=300"><div class="card-body"><span class="badge">Zara</span><h4>Chaqueta de Cuero Bikers</h4><div class="price">$119.99</div><button class="btn-add" onclick="addToCart('Chaqueta de Cuero Bikers', 119.99)">Agregar</button></div></div>
+            <div class="card"><img src="https://images.unsplash.com/photo-1556905055-8f358a7a47b2?w=300"><div class="card-body"><span class="badge">Zara</span><h4>Sudadera Hooded Casual</h4><div class="price">$59.90</div><button class="btn-add" onclick="addToCart('Sudadera Hooded Casual', 59.90)">Agregar</button></div></div>
+            <div class="card"><img src="https://images.unsplash.com/photo-1473966968600-fa801b869a1a?w=300"><div class="card-body"><span class="badge">Levi's</span><h4>Pantalón Chino Beige</h4><div class="price">$45.00</div><button class="btn-add" onclick="addToCart('Pantalón Chino Beige', 45.00)">Agregar</button></div></div>
+            <div class="card"><img src="https://images.unsplash.com/photo-1576995853123-5a10305d93c0?w=300"><div class="card-body"><span class="badge">Levi's</span><h4>Chaqueta Mezclilla Trucker</h4><div class="price">$89.50</div><button class="btn-add" onclick="addToCart('Chaqueta Mezclilla Trucker', 89.50)">Agregar</button></div></div>
+            <div class="card"><img src="https://images.unsplash.com/photo-1539109136881-3be0616acf4b?w=300"><div class="card-body"><span class="badge">Zara</span><h4>Vestido Elegante de Noche</h4><div class="price">$99.99</div><button class="btn-add" onclick="addToCart('Vestido Elegante de Noche', 99.99)">Agregar</button></div></div>
+            <div class="card"><img src="https://images.unsplash.com/photo-1544441893-675973e31985?w=300"><div class="card-body"><span class="badge">Zara</span><h4>Abrigo de Lana Invierno</h4><div class="price">$149.00</div><button class="btn-add" onclick="addToCart('Abrigo de Lana Invierno', 149.00)">Agregar</button></div></div>
+            <div class="card"><img src="https://images.unsplash.com/photo-1521572267360-ee0c2909d518?w=300"><div class="card-body"><span class="badge">Levi's</span><h4>Playera Básica Algodón</h4><div class="price">$19.99</div><button class="btn-add" onclick="addToCart('Playera Básica Algodón', 19.99)">Agregar</button></div></div>
+            <div class="card"><img src="https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?w=300"><div class="card-body"><span class="badge">Zara</span><h4>Suéter Tejido Cuello Alto</h4><div class="price">$64.99</div><button class="btn-add" onclick="addToCart('Suéter Tejido Cuello Alto', 64.99)">Agregar</button></div></div>
+        </div>
+    </div>
+
+    <div class="sql-console">📊 Query SQL: <pre id="sql-log">SELECT * FROM productos WHERE categoria_id = 1;</pre></div>
+    <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Tienda Multimarca - Inicio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo">🛍️ MultiShop</div>
+        <div class="user-controls">
+            <span id="user-display">Invitado</span>
+            <button onclick="toggleAuthModal()">Iniciar Sesión / Registro</button>
+            <button onclick="toggleCart()">🛒 Carrito (<span id="cart-count">0</span>)</button>
+        </div>
+    </header>
+
+    <nav class="navbar">
+        <a href="index.html" class="active">Inicio</a>
+        <a href="ropa.html">Ropa</a>
+        <a href="cosmeticos.html">Cosméticos</a>
+        <a href="calzado.html">Calzado</a>
+        <a href="celulares.html">Celulares</a>
+    </nav>
+
+    <section class="hero">
+        <h1>Bienvenidos a MultiShop Online</h1>
+        <p>Tu plataforma multimarca preferida. Explora nuestro amplio catálogo en ropa, productos de belleza, calzado deportivo y la última tecnología en telefonía móvil.</p>
+    </section>
+
+    <section class="features">
+        <div class="feature-card">
+            <h3>Marcas Líderes</h3>
+            <p>Productos originales de Nike, Adidas, Zara, Apple, Samsung y L'Oréal.</p>
+        </div>
+        <div class="feature-card">
+            <h3>Conexión SQL Directa</h3>
+            <p>Registro de usuarios y procesamiento de compras conectado a base de datos relacional.</p>
+        </div>
+        <div class="feature-card">
+            <h3>Envío Garantizado</h3>
+            <p>Despacho directo y gestión de stock integrada en tiempo real.</p>
+        </div>
+    </section>
+
+    <!-- Modales Compartidos -->
+    <div id="auth-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="toggleAuthModal()">&times;</span>
+            <div class="tab-buttons">
+                <button class="tab-btn active" onclick="switchTab('login')">Iniciar Sesión</button>
+                <button class="tab-btn" onclick="switchTab('register')">Registrarse</button>
+            </div>
+            <form id="form-login" onsubmit="handleLogin(event)">
+                <input type="email" id="login-email" placeholder="Correo" required>
+                <input type="password" placeholder="Contraseña" required>
+                <button type="submit" class="btn-primary">Entrar</button>
+            </form>
+            <form id="form-register" class="hidden" onsubmit="handleRegister(event)">
+                <input type="text" id="reg-name" placeholder="Nombre Completo" required>
+                <input type="email" id="reg-email" placeholder="Correo" required>
+                <input type="password" id="reg-pass" placeholder="Contraseña" required>
+                <button type="submit" class="btn-primary">Registrar</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="cart-modal" class="modal">
+        <div class="modal-content modal-lg">
+            <span class="close" onclick="toggleCart()">&times;</span>
+            <h2>Tu Carrito de Compras</h2>
+            <div id="cart-items"></div>
+            <h3>Total: $<span id="cart-total">0.00</span></h3>
+            <hr>
+            <form id="form-checkout" onsubmit="handleCheckout(event)">
+                <h3>Procesar Venta</h3>
+                <input type="text" id="ship-address" placeholder="Dirección de Envío" required>
+                <select id="pay-method" required>
+                    <option value="">Método de Pago</option>
+                    <option value="Tarjeta">Tarjeta de Crédito</option>
+                    <option value="Efectivo">Pago Contra Entrega</option>
+                </select>
+                <button type="submit" class="btn-success">Finalizar Compra</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="sql-console">📊 Query SQL: <pre id="sql-log">-- Esperando navegación...</pre></div>
+    <script src="app.js"></script>
+</body>
+</html>
